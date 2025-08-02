@@ -10,7 +10,7 @@ import './App.css'
 
 function App() {
   return (
-    <Router>
+    <Router basename="/tutor">
       <div className="app">
         <Header />
         <main className="main-content">
@@ -21,6 +21,7 @@ function App() {
             <Route path="/register" element={<StudentRegistration />} />
             <Route path="/upload-video" element={<VideoUpload />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<Home />} />
           </Routes>
         </main>
       </div>
